@@ -108,10 +108,20 @@ checksum = "9ff7415e9ae3fff1225851df9e0d9e4e5479f947619774677a63572e55e80eff"
 
 [[package]]
 name = "owl"
-version = "0.1.0"
+version = "0.0.2"
 dependencies = [
  "clap",
  "colored",
+ "permissions",
+]
+
+[[package]]
+name = "permissions"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "96cabf601e36de083e58fb7b90b4d392ce7beea9ccb79a7d56e099bb8f9542f0"
+dependencies = [
+ "libc",
 ]
 
 [[package]]

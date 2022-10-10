@@ -1,6 +1,6 @@
 [package]
 name = "owl"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -8,3 +8,26 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.0.11", features = ["derive"] }
 colored = "2.0.0"
+permissions = "0.3.0"
+[features]
+default = []
+dash-in = []
+[profile.release-size]
+inherits = "release"
+debug = 0
+strip = true
+opt-level = 3
+overflow-checks = false
+panic = "abort"
+lto = false
+incremental = false
+# Doesn't really speed up
+[profile.release-speed]
+inherits = "release"
+debug = 0
+strip = true
+opt-level = 0
+overflow-checks = false
+panic = "abort"
+lto = "fat"
+incremental = false

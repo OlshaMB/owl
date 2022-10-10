@@ -1,3 +1,3 @@
 pub trait Use {
-    fn on_use(&self) -> u8;
+    fn on_use(&self);
 }
